@@ -4,7 +4,7 @@ export const middleware = async (): Promise<Response> => {
   return NextResponse.next({
     headers: {
       "X-From-Middleware": "true",
-      "Cache-Control": `public, s-maxage=60, stale-while-revalidate=60`,
+      "Vercel-Cache-Control": `public, s-maxage=60, stale-while-revalidate=60`,
     },
   });
 };
