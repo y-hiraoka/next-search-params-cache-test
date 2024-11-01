@@ -1,7 +1,7 @@
 export default async function Home(props: {
-  searchParams: Promise<{ username?: string | string[] }>;
+  params: Promise<{ username: string }>;
 }) {
-  const { username } = await props.searchParams;
+  const { username } = await props.params;
 
   const data =
     typeof username === "string"
